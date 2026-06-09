@@ -18,7 +18,7 @@ app.add_middleware(
 def home():
     return {"message": "Backend running successfully"}
 
-@app.post("/analyze")
+api.post('/analyze', formData)
 async def analyze(file: UploadFile = File(...)):
 
     try:
